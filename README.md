@@ -85,53 +85,7 @@ A production-ready enterprise-grade web application designed to monitor appointm
 ### Infrastructure
 - **Containerization**: Docker & Docker Compose
 - **Database**: SQL Server
-- **Message Queue**: RabbitMQ (optional, for background jobs)
 - **Logging**: Serilog with ELK Stack support
-
-## Project Structure
-
-```
-hospital-appointment-system/
-├── backend/
-│   ├── src/
-│   │   ├── Hospital.Appointment.Domain/
-│   │   ├── Hospital.Appointment.Application/
-│   │   ├── Hospital.Appointment.Infrastructure/
-│   │   ├── Hospital.Appointment.Presentation/
-│   │   └── Hospital.Appointment.API/
-│   ├── tests/
-│   ├── Hospital.Appointment.sln
-│   └── Dockerfile
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── store/
-│   │   ├── hooks/
-│   │   ├── types/
-│   │   └── utils/
-│   ├── public/
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── Dockerfile
-├── database/
-│   ├── scripts/
-│   │   ├── 01_initial_schema.sql
-│   │   ├── 02_seed_data.sql
-│   │   └── migrations/
-│   └── backups/
-├── docs/
-│   ├── API_DOCUMENTATION.md
-│   ├── HMS_INTEGRATION_GUIDE.md
-│   ├── INSTALLATION_GUIDE.md
-│   ├── DEPLOYMENT_GUIDE.md
-│   ├── ARCHITECTURE.md
-│   └── USER_GUIDE.md
-├── docker-compose.yml
-├── .env.example
-└── README.md
-```
 
 ## Quick Start
 
@@ -141,93 +95,11 @@ hospital-appointment-system/
 - SQL Server 2019+
 - Docker & Docker Compose (optional)
 
-### Backend Setup
-```bash
-cd backend
-dotnet restore
-dotnet ef database update
-dotnet run
-```
+## Project Structure
 
-### Frontend Setup
-```bash
-cd frontend
-npm install
-npm start
-```
+See directory structure in documentation.
 
-### Docker Setup
-```bash
-docker-compose up -d
-```
-
-## Database Schema
-
-### Core Tables
-- **Appointments**: Appointment records synced from HMS
-- **Patients**: Patient information from HMS
-- **Clinics**: Clinic/Department information
-- **Doctors**: Healthcare provider information
-- **AppointmentStatusHistory**: Status change tracking
-- **Users**: System users and role assignments
-- **AuditLogs**: Complete audit trail
-
-## API Endpoints
-
-### Appointments
-- `GET /api/appointments` - List appointments with filtering
-- `GET /api/appointments/{id}` - Get appointment details
-- `GET /api/appointments/by-patient/{patientId}` - Patient appointments
-- `GET /api/appointments/by-date/{date}` - Appointments by date
-- `GET /api/appointments/statistics` - Appointment statistics
-
-### Dashboard
-- `GET /api/dashboard/summary` - Daily summary metrics
-- `GET /api/dashboard/trends/{period}` - Trend data
-- `GET /api/dashboard/clinic-performance` - Clinic metrics
-- `GET /api/dashboard/doctor-performance` - Doctor metrics
-
-### Reports
-- `GET /api/reports/attendance/{period}` - Attendance report
-- `GET /api/reports/no-shows/{period}` - No-show report
-- `GET /api/reports/export/{format}` - Export report
-
-### Authentication
-- `POST /api/auth/login` - User login
-- `POST /api/auth/logout` - User logout
-- `GET /api/auth/me` - Current user info
-
-## Configuration
-
-See `.env.example` for required environment variables:
-- Database connection string
-- HMS API endpoints
-- LDAP/AD configuration
-- JWT settings
-- Logging configuration
-
-## Deployment
-
-See `docs/DEPLOYMENT_GUIDE.md` for:
-- Production server setup
-- SSL/TLS configuration
-- Database backup and recovery
-- Monitoring and logging
-- Performance tuning
-- Scaling considerations
-
-## Security
-
-- HTTPS only in production
-- RBAC with claim-based authorization
-- SQL injection prevention through parameterized queries
-- CSRF protection
-- Input validation and sanitization
-- Secure password hashing (bcrypt)
-- Audit logging of all user actions
-- Rate limiting on API endpoints
-
-## Support & Documentation
+## Documentation
 
 - **API Documentation**: `docs/API_DOCUMENTATION.md`
 - **HMS Integration**: `docs/HMS_INTEGRATION_GUIDE.md`
@@ -238,11 +110,7 @@ See `docs/DEPLOYMENT_GUIDE.md` for:
 
 ## License
 
-[Your Hospital] - All Rights Reserved
-
-## Contact
-
-For technical support and inquiries, please contact the development team.
+All Rights Reserved
 
 ---
 
