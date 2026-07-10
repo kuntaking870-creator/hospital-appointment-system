@@ -79,7 +79,7 @@ A production-ready enterprise-grade web application designed to monitor appointm
 - **UI Library**: Material UI (MUI)
 - **State Management**: Redux Toolkit
 - **HTTP Client**: Axios
-- **Charts**: Chart.js / Recharts
+- **Charts**: Recharts
 - **Responsive Design**: Mobile-first approach
 
 ### Infrastructure
@@ -94,10 +94,6 @@ A production-ready enterprise-grade web application designed to monitor appointm
 - Node.js 18+
 - SQL Server 2019+
 - Docker & Docker Compose (optional)
-
-## Project Structure
-
-See directory structure in documentation.
 
 ## Documentation
 
